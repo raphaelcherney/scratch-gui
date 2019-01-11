@@ -16,6 +16,7 @@ import text2speechImage from './text2speech.png';
 import text2speechInsetImage from './text2speech-small.svg';
 import makeymakeyImage from './makeymakey.png';
 import makeymakeyInsetImage from './makeymakey-small.svg';
+import rootImage from './root.png';
 
 import microbitPeripheralImage from './peripheral-connection/microbit/microbit-illustration.svg';
 import microbitMenuImage from './peripheral-connection/microbit/microbit-small.svg';
@@ -24,6 +25,8 @@ import ev3MenuImage from './peripheral-connection/ev3/ev3-small.svg';
 import wedoPeripheralImage from './peripheral-connection/wedo/wedo-illustration.svg';
 import wedoMenuImage from './peripheral-connection/wedo/wedo-small.svg';
 import wedoButtonImage from './peripheral-connection/wedo/wedo-button-illustration.svg';
+import rootPeripheralImage from './peripheral-connection/root/root-illustration.svg';
+import rootMenuImage from './peripheral-connection/root/root-small.svg';
 
 export default [
     {
@@ -232,6 +235,36 @@ export default [
             />
         ),
         helpLink: 'https://scratch.mit.edu/wedo'
+
+    },
+    {
+        name: 'Root',
+        extensionId: 'root',
+        collaborator: 'Root Robotics',
+        iconURL: rootImage,
+        insetIconURL: rootMenuImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Draw and create with Root."
+                description="Use Root with Scratch 3.0!"
+                id="gui.extension.root.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        peripheralImage: rootPeripheralImage,
+        smallPeripheralImage: rootMenuImage,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting..."
+                description="Message to help people connect to their Root."
+                id="gui.extension.root.connectingMessage"
+            />
+        ),
+        helpLink: 'https://scratch.mit.edu/root'
 
     }
 ];
